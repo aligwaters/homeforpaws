@@ -1,2 +1,2 @@
-# homeforpaws
-#cct460
+# cct460
+CCT460 Wordpress Theme
