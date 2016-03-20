@@ -124,6 +124,12 @@ function home_for_paws_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
+/* Google Fonts */
+function add_google_fonts() {
+wp_enqueue_Style ('add_google_fonts', 'https://fonts.googleapis.com/css?family=Gloria+Hallelujah' false);
+}
+
 add_action( 'wp_enqueue_scripts', 'home_for_paws_scripts' );
 
 /**
