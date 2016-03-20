@@ -792,8 +792,23 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Content
+# Footer
 --------------------------------------------------------------*/
+#colophon
+	{
+		border: solid 2px;
+		background-color: #;
+		color: #33ccff;
+		text-align: centre;
+		max-height: 200px;
+		padding: 15px;
+	}
+#footer-menu
+	{
+		text-align: centre;
+		margin: 15px;
+		padding: 2px;
+	}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
