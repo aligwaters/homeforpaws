@@ -1,9 +1,9 @@
 /*
 Theme Name: Home for Paws
 Theme URI: http://underscores.me/
-Author: Underscores.me
+Author: Alexandra, Harbani, Ashley
 Author URI: http://underscores.me/
-Description: Description
+Description: A website that promotes Homes for Paws dog adoption - A theme Created that entails the brand of the company and is responsive.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,249 +23,229 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+# Normalize  - basic css influencing many classes all together
 --------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-html {
-	font-family: sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
-}
-
-body {
-	margin: 0;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-	display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
+html, div, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, footer, header, hgroup, menu, nav, output,  section, summary, time, mark, audio, video {
+	border: none;
+  	margin: 0;
+	padding: 0;
 	vertical-align: baseline;
+}    
+/* make top and bottom different color*/
+html {
+	background-image: url(grass5.jpg);
+	background-attachment: local;
 }
 
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
 
-[hidden],
-template {
-	display: none;
-}
+/*------------------------------------------------------------ SLIDER--------------------------------- */
+/* slider appears on all page */
 
 a {
-	background-color: transparent;
+  color:blue;
+  text-decoration:none;
 }
 
-a:active,
-a:hover {
-	outline: 0;
+h2 {
+  margin:30px 0px;
+  font-weight:normal;
 }
 
-abbr[title] {
-	border-bottom: 1px dotted;
+/* General Slider */
+#css3-slider {
+background-image: url(pawsthree.jpg); /* leads to an image appearing in the slider other than the three designated images in header.php */
+  margin:20px auto;
+  padding:0px 0px;
+  width:1080x;
+  height:300px;
+  position:relative;
+  visibility: visible;
+  opacity: 1;
 }
 
-b,
+#css3-slider li {
+  list-style:none;
+  margin:0px 0px;
+  padding:0px 0px;
+}
+
+/* Slider appearance */
+#css3-slider li input + label {
+  position:absolute;
+  bottom:5px;
+  left:10px;
+  z-index:999;
+  font:bold 11px/16px Arial,Sans-Serif;
+  background-color:black;
+  color:white;
+  padding:0px 0px;
+  width:20px;
+  text-align:center;
+  cursor:pointer;
+  opacity:1;
+}
+
+#css3-slider li:nth-child(2) label {left:28px;}
+#css3-slider li:nth-child(3) label {left:46px;}
+#css3-slider li:nth-child(4) label {left:64px;}
+#css3-slider li:nth-child(5) label {left:82px;}
+
+/* Images in the slider */
+#css3-slider li img {
+  border:none;
+  outline:none;
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:0px;
+  height:0px;
+  opacity:1;
+
+ }
+
+/* Show the image with transition  */
+#css3-slider li input:checked ~ img,
+#css3-slider li input:checked ~ a img {
+  top:0%;
+  left:0%;
+  width:960px;
+  height:300px;
+  visibility:visible;
+  -webkit-transform:rotate(720deg) scale(1);
+  -moz-transform:rotate(720deg) scale(1);
+  -ms-transform:rotate(720deg) scale(1);
+  -o-transform:rotate(720deg) scale(1);
+  transform:rotate(720deg) scale(1);
+  opacity:1;
+  z-index:99;
+}
+/* Hide the radio and have the slider appear as images instgead of bubbles */
+#css3-slider input {
+  display:none;
+  visibility: visible;
+}
+
+/* The appearance of the company name and title at the top */
+.site-title {
+	padding-top: 25px;
+	text-align: center;
+	float: center;
+	}
+h1 {
+  color:#33ccff;
+  font-size: 27px; 
+  text-align: center; 
+}
+h2 {
+  color: #33ccff;
+  font-size: 21px;  
+}
+h3 {
+  color: #33ccff;
+  font-size: 18px;  
+}
+h4 {
+  color: #33ccff;
+  font-size: 16px;  
+}
+h5 {
+  color: #33ccff;
+  font-size: 14px;  
+}
+h6 {
+  color: #33ccff;
+  font-size: 13px;  
+}
+p, ul, ol, li, dl, address {
+  font-size: 13px;
+  text-align:center;
+}
+ul {
+  margin-left: 16px;   
+}
+ol {
+	list-style-type: decimal;
+	margin-left: 20px;
+}
 strong {
 	font-weight: bold;
 }
-
-dfn {
+cite, em, i {
 	font-style: italic;
 }
 
-h1 {
-	font-family: 'Gloria Hallelujah', cursive;
-	font-size: 2em;
-	margin: 0.67em 0;
+a {
+  color: #333333;  /* Sets the color of the links */
+  text-decoration: none;        /* takes away underline in links  */
+  font-size: 1.45em;
+  font-family: 'Gloria Hallelujah', cursive;   /* uses the google font, if unavailable, uses default cursive font */
 }
-
-mark {
-	background: #ff0;
-	color: #000;
+.site-title {
+	padding-top: 25px;
+	text-align: center;
+	float: center;
+	font-size: 150px;
+	}
+a:hover {
+  text-decoration: none; /* sets the color of the hover on links */
+  color: #d9d9d9;           
 }
-
-small {
-	font-size: 80%;
+a img {
+  border: none;      
 }
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	top: -0.5em;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
 img {
-	border: 0;
+  height: auto; 
+  max-width: 100%;   
 }
-
-svg:not(:root) {
-	overflow: hidden;
-}
-
-figure {
-	margin: 1em 40px;
-}
-
-hr {
-	box-sizing: content-box;
-	height: 0;
-}
-
-pre {
-	overflow: auto;
-}
-
-code,
-kbd,
-pre,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	color: inherit;
-	font: inherit;
-	margin: 0;
-}
-
-button {
-	overflow: visible;
-}
-
-button,
-select {
-	text-transform: none;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
-}
-
-button[disabled],
-html input[disabled] {
-	cursor: default;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input {
-	line-height: normal;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-input[type="search"] {
-	-webkit-appearance: textfield;
-	box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-	border: 0;
-	padding: 0;
-}
-
-textarea {
-	overflow: auto;
-}
-
-optgroup {
-	font-weight: bold;
-}
-
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  font-size: 13px;
+  width: 100%;      
 }
 
-td,
-th {
-	padding: 0;
+.homehead{
+	float: center;
 }
 
+#dogone{
+	float: left;
+	width: 300px;
+	height: auto;
+	
+}
+#dogtwo{
+	float: center;
+	width: 300px;
+	height: 225px; /* fixes the photo to be the same height as other photos */
+	
+}
+
+#dogthree{
+	float: right;
+	width: 300px;
+	height: auto;
+	
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-info {
+	text-align: center;
+	}
+#colophon /* results in the footer text and copyright label. */
+	{
+		color: #33ccff;
+		float: center;
+		text-align: center;
+		max-width: auto;
+	}
+#footer-menu
+	{
+		text-align: center;
+		padding: 2px;
+		float: center;
+		color: #cc33ff;
+	}
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -288,7 +268,20 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Gloria Hallelujah', cursive;   /* uses the google font, if unavailable, uses default cursive font */
+	font-weight: normal;
+	line-height: 125%;
+}
+
+h2{
+	font-size: 1.5em; /* 24px / 16px */
+	margin-bottom: 1em;
+}
+
+h3{
+	font-size: 1.25em; /* 20px / 16px */
+	margin-bottom: 1em;
+	padding-top: 1em;
 }
 
 p {
@@ -347,6 +340,11 @@ big {
 	font-size: 125%;
 }
 
+.site-title {
+	font-size: 3em;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -360,9 +358,6 @@ html {
 	box-sizing: inherit;
 }
 
-body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
-}
 
 blockquote:before,
 blockquote:after,
@@ -389,11 +384,11 @@ ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 ol {
-	list-style: decimal;
+	list-style: none;
 }
 
 li > ul,
@@ -522,23 +517,20 @@ input[type="color"] {
 	padding: 3px;
 }
 
-textarea {
-	padding-left: 3px;
+text-area {
+	padding-left: 1px;
 	width: 100%;
 }
 
 /*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #33ccff;
 }
 
 a:visited {
-	color: purple;
+	color: none;
 }
 
 a:hover,
@@ -559,13 +551,30 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: center; /* makes the menu centered */
-	width: 100%;
+.page_item page-item-1838{
+	color:#000000;
+	}
+.menu-box {
+  background-image: url(pawsthree.jpg); /* leads to the paws image in the background of the menu box */
+  background-size: 31%;
+  min-height: 50px;
+  margin:0 auto;
 }
-
+.nav-menu { /* influences the text in teh menu */
+	color: #33ccff;
+	font-size: 14px;
+	}
+.main-navigation {
+		right: 5px;
+		left: 0px;
+		z-index: 2000;
+		float: none;
+		width: 100%;
+		display: block;
+		clear: both;
+		display: block;
+		margin:0 auto;
+		}
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -574,9 +583,7 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
 	position: relative;
-	padding: 10px; /* adds space around text */
 }
 
 .main-navigation a {
@@ -586,7 +593,7 @@ a:active {
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
+	float: center;
 	position: absolute;
 	top: 1.5em;
 	left: -999em;
@@ -602,21 +609,6 @@ a:active {
 	width: 200px;
 }
 
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
@@ -634,7 +626,7 @@ a:active {
 .main-navigation .current-menu-ancestor > a {
 }
 
-/* Small menu. */
+/* Small menu when screen in shrunk */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
@@ -650,10 +642,10 @@ a:active {
 }
 
 @media screen and (max-width:480px){	/* responsive design for small screens */
-	#site-navigation{
+	#
+	{
 		height:auto;
 	}
-	
 	#site-navigation ul li{
 		display: block;
 	}
@@ -791,24 +783,7 @@ a:active {
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#colophon
-	{
-		border: solid 2px;
-		background-color: #;
-		color: #33ccff;
-		text-align: centre;
-		max-height: 200px;
-		padding: 15px;
-	}
-#footer-menu
-	{
-		text-align: centre;
-		margin: 15px;
-		padding: 2px;
-	}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -839,6 +814,18 @@ a:active {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+#page {
+	background-color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	line-height: 125%;
+	margin: 3em auto;
+	max-width: 960px;
+	width: 90%;
+	border-image: url(paw-print-frame.jpg) 30 repeat;
+	padding: 15px;
 }
 
 /*--------------------------------------------------------------

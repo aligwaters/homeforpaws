@@ -12,10 +12,6 @@
 ?>
 
 	</div><!-- #content -->
-<div id="footer-menu">
-<?php wp_nav_menu( array( 'theme_location'=>
-'secondary', 'menu_class'=>'foot-menu' ) ); ?>
-</div><!-- #footer-menu -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
@@ -32,10 +28,6 @@
                 <p class="credits"><?php printf( __( 'Theme: %1$s by %2$s.', 'Harbani and Ash and Ali' ), 'homeforpaws', '<a href="http://underscores.me" rel="designer">Home For Paws</a>' ); ?></p>
 		</div><!-- .site-info -->
 			
-<div id="footer-menu">
-	<?php wp_nav_menu( array( 'theme_location'=>'
-	secondary','menu_class'=>'foot-menu' ) ); ?>
-		</div><!-- #footer-menu -->
 		
 	</footer><!-- #colophon -->
 </div><!-- #page -->

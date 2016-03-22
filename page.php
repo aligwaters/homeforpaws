@@ -16,14 +16,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-/* this shows the comments in the wordpress site
-*/
+
 			<?php
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
+				// this lets comments show up, if you have any
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
@@ -35,5 +34,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

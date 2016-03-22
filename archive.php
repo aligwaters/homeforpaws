@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Home_for_Paws
+ * @package _s
  */
 
 get_header(); ?>
