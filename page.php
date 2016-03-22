@@ -16,7 +16,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+/* this shows the comments in the wordpress site
+*/
 			<?php
 			while ( have_posts() ) : the_post();
 
