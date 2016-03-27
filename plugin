@@ -1,14 +1,64 @@
 <?php 
 /* 
-Plugin name: hfp
+Plugin name: Assignment three Home for Paws 
 Description: 
 Version: 1.0
 Work cited from: https://codex.wordpress.org/Post_Types
 */
 
-function hfp_custom_post_type (){
+
+class wp_hfp{
+
+  // Constructor
+    function __construct() {
+
+        add_action( 'admin_menu', array( $this, 'wpa_add_menu' ));
+        register_activation_hook( __FILE__, array( $this, 'wpa_install' ) );
+        register_deactivation_hook( __FILE__, array( $this, 'wpa_uninstall' ) );
+    }
+
+    /*
+      * Actions perform at loading of admin menu
+      */
+    function wpa_add_menu() {
+
+        add_menu_page( 'Analytify simple', 'Analytify', 'manage_options', 'analytify-dashboard', array(
+                          __CLASS__,
+                         'wpa_page_file_path'
+                        ), plugins_url('images/wp-analytics-logo.png', __FILE__),'2.2.9');
+
+        add_submenu_page( 'hpf-dashboard', 'hfp simple' . ' Dashboard', ' Dashboard', 'manage_options', 'hfp-dashboard', array(
+                              __CLASS__,
+                             'wpa_page_file_path'
+                            ));
+
+        add_submenu_page( 'hfp-dashboard', 'hfp simple' . ' Settings', '<b style="color:#f9845b">Settings</b>', 'manage_options', 'hfp-settings', array(
+                              __CLASS__,
+                             'wpa_page_file_path'
+                            ));
+    }
+
+    /*
+     * Actions perform on loading of menu pages
+     */
+    function wpa_page_file_path() {
+
+    }
+
+    /*
+     * Actions perform on activation of plugin
+     */
+    function wpa_install() {
+
+    }
+
+    /*
+     * Actions perform on de-activation of plugin
+     */
+    function wpa_uninstall() {
+
+    }
 
 }
-add_action ('init', 'hfp_custom_post_type');
 
-
+new wp_hfp();
