@@ -1,3 +1,15 @@
+<div id="footer-menu">
+	<?php wp_nav_menu( array( 'theme_location'=>'
+	secondary','menu_class'=>'foot-menu' ) ); ?>
+		</div><!-- #footer-menu -->
+		
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+
+
+
 <?php 
 /* 
 Plugin name: Assignment three Home for Paws Plugin 
