@@ -1,38 +1,25 @@
-=== _s ===
+=== HFP Assignment 3 ===
+Contributors: Ashley Ng, Ali Waters, Harbani Kaur
+Tags: widget, plugin, shortcode, custom post type, custom
+Stable tag: stable
+License URI: http://phoenix.sheridanc.on.ca/~ccit3432
 
-Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
-
-Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-A starter theme called _s, or underscores.
-
+hfp is a WordPress plugin that adds a custom post type, a widget, and a shortcode. 
 == Description ==
 
-Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+The widget will display a custom post type (the latest recent posts) and should display the featured image or each post. This widget works without needing any additional code of files outside of the plugin folder and will work with anything theme.
+
+The shortcode should display a selection of posts from the custom post type (latest posts). You can 
+
 
 == Installation ==
-	
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
 
-== Frequently Asked Questions ==
+1. Upload `hfp.php` to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Choose how many posts you want to show in the Widgets page and click save
+4. All done!
 
-= Does this theme support any plugins? =
-
-_s includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
+v1.0 - Initial release.
 
-= 1.0 - May 12 2015 =
-* Initial release
-
-== Credits ==
-
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
