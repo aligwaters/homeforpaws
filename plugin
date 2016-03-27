@@ -1,1 +1,14 @@
+<?php 
+/* 
+Plugin name: Assignment three Home for Paws 
+Description: 
+Version: 1.0
+Work cited from: https://codex.wordpress.org/Post_Types
+*/
+
+function hfp_custom_post_type (){
+
+}
+add_action ('init', 'hfp_custom_post_type');
+
 
